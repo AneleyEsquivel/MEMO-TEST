@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image:  url('./png-clipart-fantasy-forest-green-background-taobao-taobao-creative-nature.png' );* <-- aquí va la ruta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Comic Neue', cursive;
+    color: rgb(252, 80, 0)
+    
+  }
+  .carta{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    font-size: 30px;
+    background-color: azure;
+    text-align: center;
+  }
+
+  .cartas{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 70%;
+    justify-content: center;
+
+  }
+
+  button{
+    display: block;
+    margin: 20px auto;
+  }
