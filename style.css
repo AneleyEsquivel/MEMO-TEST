@@ -4,27 +4,62 @@
     box-sizing: border-box;
 }
 body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image:  url('./png-clipart-fantasy-forest-green-background-taobao-taobao-creative-nature.png' );* <-- aquí va la ruta */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: 'Comic Neue', cursive;
-    color: rgb(252, 80, 0)
-    
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+  background-size: 400% 400%;
+  animation: neonBackground 15s ease infinite;
+  overflow: hidden;
+}
+
+/* Efecto de luces de neón encima */
+body::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 20% 30%, #00ffff33 0%, transparent 60%),
+              radial-gradient(circle at 80% 70%, #ff00ff33 0%, transparent 60%),
+              radial-gradient(circle at 50% 50%, #39ff1433 0%, transparent 70%);
+  animation: neonGlow 10s linear infinite;
+  mix-blend-mode: screen;
+  z-index: -1;
+}
+
+/* Movimiento del fondo */
+@keyframes neonBackground {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Movimiento de las luces */
+@keyframes neonGlow {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
   .carta{
     height: 200px;
     width: 200px;
-    border: 2px solid black;
-    font-size: 30px;
-    background-color: azure;
+    border: 6px solid rgb(5, 239, 247);
+    font-size: 100px;
+    background-color:transparent;
     text-align: center;
+    padding-top: 15px;
+    
   }
 
   .cartas{
@@ -32,12 +67,60 @@ body {
     flex-direction: row;
     gap: 10px;
     flex-wrap: wrap;
-    width: 70%;
+    width: 60%;
     justify-content: center;
+    margin: 20px auto;
 
   }
 
   button{
     display: block;
     margin: 20px auto;
+    font-size: 20px;
+    color: aquamarine;
+    background-color: transparent;
+    box-shadow: 2px 2px 8px black;
+    padding: 5px;
   }
+
+  h1 {
+  font-family: 'Orbitron', sans-serif;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  justify-content: center;
+  display: flex;
+  font-size: 60px;
+}
+
+footer{
+  font-family: 'Orbitron', sans-serif;
+  color: rgb(250, 248, 248);
+   justify-content: center;
+  display: flex;
+  font-size: 20px;
+  
+
+}
+
+.atras{
+  background-color: rgb(182, 214, 214);
+  color: transparent;
+  height: 200px;
+    width: 200px;
+     background-image:  url('./RECURSOS/BIRRA.png'); /* <-- aquí va la ruta */
+  background-size: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.FIN{
+   font-family: 'Orbitron', sans-serif;
+  color: rgb(250, 248, 248);
+   justify-content: center;
+  display: flex;
+  font-size: 20px;
+}
+
+.oculto{
+  display: none;
+}
