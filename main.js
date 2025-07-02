@@ -39,7 +39,35 @@ const crearTablero = () => {
             }else{
                 segundaCarta = carta;
                 bloqueado = true;
+
+                if(primeraCarta.dataset.icono === segundaCarta.dataset.icono){
+                    aciertos++;
+                    primeraCarta = null;
+                    segundaCarta = null;
+                    bloqueado = false;
+                    
+                if(aciertos === elementos.length){
+                    mensaje.textContent = "¡¡¡¡GANASTE UNA BIRRA DE LITRO!!!!"
+
+                }
+                    
+                }else{
+                    setTimeout(() =>{
+                        primeraCarta.textContent = "";
+                        segundaCarta.textContent = "";
+                        primeraCarta = null;
+                        segundaCarta = null;
+                        bloqueado = false;
+
+                    }, 1000);
+                }
+            
             }
-        })
-    })
-}
+        });
+
+        tablero.appendChild(carta);
+    });
+};
+
+botonReiniciar.addEventListener("click", crearTablero);
+crearTablero();

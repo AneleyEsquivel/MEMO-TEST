@@ -52,13 +52,16 @@ body::before {
   }
 }
   .carta{
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     border: 6px solid rgb(5, 239, 247);
-    font-size: 100px;
+    font-size: 36px;
     background-color:transparent;
-    text-align: center;
+ 
     padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
   }
 
@@ -67,7 +70,7 @@ body::before {
     flex-direction: row;
     gap: 10px;
     flex-wrap: wrap;
-    width: 60%;
+    max-width: 500px;
     justify-content: center;
     margin: 20px auto;
 
@@ -105,15 +108,15 @@ footer{
 .atras{
   background-color: rgb(182, 214, 214);
   color: transparent;
-  height: 200px;
-    width: 200px;
+  height: 100px;
+    width: 100px;
      background-image:  url('./RECURSOS/BIRRA.png'); /* <-- aquí va la ruta */
   background-size: 150px;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.FIN{
+#FIN{
    font-family: 'Orbitron', sans-serif;
   color: rgb(250, 248, 248);
    justify-content: center;
